@@ -5,7 +5,10 @@ var MessagesView = {
   initialize: function() {
   },
 
-  render: function() {
+  renderMessage: function(message) {
+    Parse.create(message);
+
+    
   }
 
 };
