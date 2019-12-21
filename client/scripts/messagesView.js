@@ -35,7 +35,6 @@ var MessagesView = {
     // $('#chats').childNodes.push(message);
 
     // console.log($('#chats').children());
-
   }
 
 };
