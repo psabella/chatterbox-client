@@ -8,6 +8,7 @@ var MessagesView = {
   },
 
   renderMessage: function(message) {
+
     var message = MessageView.render(message);
     // var messages = $('#chats').children();
     // messages = [...messages];
@@ -18,7 +19,6 @@ var MessagesView = {
     // $('#chats').childNodes.push(message);
     $('#chats').append(message);
     // console.log($('#chats').children());
-
   }
 
 };
