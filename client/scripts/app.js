@@ -18,6 +18,7 @@ var App = {
   },
 
   fetch: function(callback = ()=>{}) {
+    // var messages;
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
@@ -25,8 +26,10 @@ var App = {
         var message = data.results[i];
         MessagesView.renderMessage(message);
       }
+      // messages = data;
 
     });
+    // return messages;
     callback();
   },
 

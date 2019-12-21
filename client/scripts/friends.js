@@ -1,3 +1,3 @@
 var Friends = {
-  toggleStatus: () => {}
+  toggleStatus: () => { return true; }
 };

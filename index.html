@@ -26,9 +26,13 @@
       <h1>chatterbox</h1>
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
-        Room:
+        Rooms:
         <select></select>
-        <button>Add Room</button>
+        <!-- <button>Add Room</button> -->
+        <form class="addRoom" method="post">
+          <input type="text" name="newRoom" class="roomInput"/>
+          <button type="button" value="Add Room" class="button">Add Room</button>
+        </form>
       </div>
       <form action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>
