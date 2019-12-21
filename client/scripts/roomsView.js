@@ -13,6 +13,20 @@ var RoomsView = {
       this.$roomInput.val('');
     });
 
+    this.$select.on('change', () => {
+      $('.chat').hide();
+      var children = $('#chats').children();
+
+      for (var i = 0; i < children.length; i++) {
+        console.log(this.$select.val());
+
+        if ($(children[i]).find('.roomname').text() === this.$select.val()) {
+          $(children[i]).show();
+        }
+      }
+      console.log('hello word');
+    });
+
     Parse.readAll((data) => {
       // examine the response from the server request:
       var rooms = [];

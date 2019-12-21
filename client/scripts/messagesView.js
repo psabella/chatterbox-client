@@ -12,29 +12,21 @@ var MessagesView = {
       this.$newMessage.val('');
       Parse.create(message, () => { alert('message sent'); });
     });
-    // Messages.print();
-    // FormView.$form.on('click', FormView.handleSubmit);
-    // $('.username').on('click', () => {
-    //   Friends.toggleStatus();
 
-    // });
+    $('#chats').on('click', '.username', (event) => {
+      var user = $(event.target).text();
+      if ($('div:contains("' + user + '")').hasClass('friend')) {
+        $('div:contains("' + user + '")').removeClass('friend');
+      } else {
+        $('div:contains("' + user + '")').addClass('friend');
+      }
+    });
   },
 
   renderMessage: function(message) {
-    if (message.username && message.roomname) {
+    if (message.username && message.roomname && message.text) {
       var message = MessageView.render(message);
       $('#chats').prepend(message);
     }
-
-    // var messages = $('#chats').children();
-    // messages = [...messages];
-    // messages.push(message);
-    // if (!$('#chats').children()) {
-    //   // $('#chats').children = [];
-    // }
-    // $('#chats').childNodes.push(message);
-
-    // console.log($('#chats').children());
   }
-
 };
